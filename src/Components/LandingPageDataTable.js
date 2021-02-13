@@ -9,8 +9,6 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-import DeleteIcon from '@material-ui/icons/Delete';
-import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import { useStickyState } from './Admin/listItems.js';
@@ -53,8 +51,7 @@ const useStyles = makeStyles(theme => ({
 export default function CustomizedTables() {
   const classes = useStyles();
   const [
-    businessListings,
-    setCount
+    businessListings
   ] = useStickyState( [] , "businesslisting");
 
   return (

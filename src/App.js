@@ -1,15 +1,11 @@
-import React, { Component, useContext, createContext, useState } from "react";
-import logo from './logo.svg';
+import React, { useContext, createContext, useState } from "react";
 import './App.css';
 import SignUp from './Components/SignUp';
 import LandingPageDataTable from './Components/LandingPageDataTable';
 import { BrowserRouter, 
   Route, 
   Switch, 
-  Link,
-  Redirect,
-  useHistory,
-  useLocation } from 'react-router-dom';
+  Redirect } from 'react-router-dom';
 import Dashboard from './Components/Admin/Dashboard';
 
 function App() {

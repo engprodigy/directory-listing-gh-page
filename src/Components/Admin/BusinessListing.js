@@ -1,4 +1,4 @@
-import React, { useReducer, useState, useEffect } from 'react';
+import React, { useReducer, useState } from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -19,28 +19,12 @@ import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 import { useStickyState } from './listItems.js';
 import DeleteIcon from '@material-ui/icons/Delete';
-import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
-import ListItemText from '@material-ui/core/ListItemText';
 import Select from '@material-ui/core/Select';
-import Checkbox from '@material-ui/core/Checkbox';
 import Chip from '@material-ui/core/Chip';
-
-// // Generate Order Data
-// function createData(id, date, name, shipTo, paymentMethod, amount) {
-//   return { id, date, name, shipTo, paymentMethod, amount };
-// }
-
-// const rows = [
-//   createData(0, '16 Mar, 2019', 'Elvis Presley', 'Tupelo, MS', 'VISA ⠀•••• 3719', 312.44),
-//   createData(1, '16 Mar, 2019', 'Paul McCartney', 'London, UK', 'VISA ⠀•••• 2574', 866.99),
-//   createData(2, '16 Mar, 2019', 'Tom Scholz', 'Boston, MA', 'MC ⠀•••• 1253', 100.81),
-//   createData(3, '16 Mar, 2019', 'Michael Jackson', 'Gary, IN', 'AMEX ⠀•••• 2000', 654.39),
-//   createData(4, '15 Mar, 2019', 'Bruce Springsteen', 'Long Branch, NJ', 'VISA ⠀•••• 5919', 212.79),
-// ];
 
 export function MaterialUIFormBusinessListingSubmit(props) {
   const useStyles = makeStyles(theme => ({
@@ -111,8 +95,7 @@ export function MaterialUIFormBusinessListingSubmit(props) {
   ] = useStickyState( [] , "businesslisting");
 
   const [
-    categories,
-    setCategory
+    categories
   ] = useStickyState( [] , "category");
 
   const handleSubmit = evt => {
@@ -120,7 +103,7 @@ export function MaterialUIFormBusinessListingSubmit(props) {
 
     let data = { formInput };
     
-    if(data.formInput.name != "")
+    if(data.formInput.name !== "")
     {
 
       setCount([
@@ -177,18 +160,6 @@ export function MaterialUIFormBusinessListingSubmit(props) {
     };
   }
 
- 
-
-  const handleChangeMultiple = (event) => {
-    const { options } = event.target;
-    const value = [];
-    for (let i = 0, l = options.length; i < l; i += 1) {
-      if (options[i].selected) {
-        value.push(options[i].value);
-      }
-    }
-    setPersonName(value);
-  };
 
   return (
     <div>
@@ -391,12 +362,7 @@ const useStyles = makeStyles((theme) => ({
 
     var difference = stickyValue.length - updateView;
 
-    for(var i = 0; i < difference; i++)
-    {
-
-    }
-
-    if(updateView != stickyValue.length)
+    if(updateView !== stickyValue.length)
       {
         var tempListingArray = [];
         for(var i = difference; i > 0; i--)
