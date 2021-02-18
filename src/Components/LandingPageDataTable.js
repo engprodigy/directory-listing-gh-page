@@ -49,6 +49,41 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function CustomizedTables() {
+   // add default values
+   var tempListingArray = [];
+   tempListingArray.push({
+    name: "P&G",
+    description: "soap and detergent",
+    phonenumber: "08181373329",
+    email:"pg@pg.com",
+    websiteurl: "https://procter.com",
+    categories: [],
+    images: ""
+    });
+    tempListingArray.push({
+      name: "Dangote",
+      description: "Cement",
+      phonenumber: "08034105274",
+      email:"admin@dangote.com",
+      websiteurl: "https://dangote.com",
+      categories: [],
+      images: ""
+      });
+      tempListingArray.push({
+        name: "Guiness",
+        description: "beer and drinks",
+        phonenumber: "08181373329",
+        email:"kolbello@yahoo.com",
+        websiteurl: "https://guiness.com",
+        categories: [],
+        images: ""
+        });
+  
+  const stickyValue = window.localStorage.getItem("businesslisting");
+    if(stickyValue === null){
+      window.localStorage.setItem("businesslisting", JSON.stringify([...tempListingArray]));
+    }
+ 
   const classes = useStyles();
   const [
     businessListings
