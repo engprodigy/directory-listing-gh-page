@@ -2,6 +2,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Publised here on surge [http://zippy-wrist.surge.sh/](http://zippy-wrist.surge.sh/)
 
+Admin login details:
+Email Address: admin@email.com
+Password: @Password123
+
 ## Available Scripts
 
 In the project directory, you can run:
