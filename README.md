@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Publised here on surge [http://zippy-wrist.surge.sh/](http://zippy-wrist.surge.sh/)
+
+Admin login details:<br />
+Email Address: admin@email.com<br />
+Password: @Password123
+
 ## Available Scripts
 
 In the project directory, you can run:
