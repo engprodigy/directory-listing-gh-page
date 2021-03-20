@@ -209,6 +209,29 @@ export function FormDialog(props) {
 
 export function ListView() {
 
+   //add default categories
+   var tempCategoriesArray = [];
+
+   tempCategoriesArray.push({
+     name:"Retail",
+     email: ""
+   });
+
+   tempCategoriesArray.push({
+    name:"Energy",
+    email: ""
+  });
+
+  tempCategoriesArray.push({
+    name:"Automobile",
+    email: ""
+  });
+
+  const stickyValue = window.localStorage.getItem("category");
+    if(stickyValue === null){
+      window.localStorage.setItem("category", JSON.stringify([...tempCategoriesArray]));
+    }
+
   const [
     categories,
     setCount

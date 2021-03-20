@@ -1,0 +1,69 @@
+// Appear animation, Timeout: 225
+.ax-appear-enter {
+    will-change: transform;
+    opacity: 0.01;
+    transform: scale(0.95);
+}
+
+.ax-appear-enter.ax-appear-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 100ms ease-in, transform 150ms ease-in-out;
+}
+
+.ax-appear-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.ax-appear-exit.ax-appear-exit-active {
+    opacity: 0.01;
+    transform: scale(0.9);
+    transition: opacity 100ms ease-in, transform 100ms ease-in;
+}
+
+// Fade animation, Timeout: 225
+.ax-fade-enter {
+    opacity: 0.01;
+    will-change: transform;
+}
+
+.ax-fade-enter.ax-fade-enter-active {
+    opacity: 1;
+    transition: opacity 225ms ease-in;
+}
+
+.ax-fade-exit {
+    opacity: 1;
+}
+
+.ax-fade-exit.ax-fade-exit-active {
+    opacity: 0.01;
+    transition: opacity 200ms ease-in;
+}
+
+// Shake animation, Timeout: 400
+.ax-shake-enter {
+    will-change: transform;
+}
+.ax-shake-enter.ax-shake-enter-active {
+    animation: shake 400ms linear;
+}
+
+@keyframes shake {
+    8%, 41% {
+        -webkit-transform: translateX(-5px);
+    }
+    25%, 58% {
+        -webkit-transform: translateX(5px);
+    }
+    75% {
+        -webkit-transform: translateX(-2px);
+    }
+    92% {
+        -webkit-transform: translateX(2px);
+    }
+    0%, 100% {
+        -webkit-transform: translateX(0);
+    }
+}

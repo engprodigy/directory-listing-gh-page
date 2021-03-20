@@ -13,6 +13,9 @@ import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
 import { useStickyState } from './Admin/listItems.js';
 import Chip from '@material-ui/core/Chip';
+import Jokes from './Jokes.js';
+
+
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -49,6 +52,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function CustomizedTables() {
+  
    // add default values
    var tempListingArray = [];
    tempListingArray.push({
@@ -57,7 +61,7 @@ export default function CustomizedTables() {
     phonenumber: "08181373329",
     email:"pg@pg.com",
     websiteurl: "https://procter.com",
-    categories: [],
+    categories: ["Retail", "Automobile"],
     images: ""
     });
     tempListingArray.push({
@@ -66,7 +70,7 @@ export default function CustomizedTables() {
       phonenumber: "08034105274",
       email:"admin@dangote.com",
       websiteurl: "https://dangote.com",
-      categories: [],
+      categories: ["Energy"],
       images: ""
       });
       tempListingArray.push({
@@ -75,7 +79,7 @@ export default function CustomizedTables() {
         phonenumber: "08181373329",
         email:"kolbello@yahoo.com",
         websiteurl: "https://guiness.com",
-        categories: [],
+        categories: ["Retail", "Energy"],
         images: ""
         });
   
@@ -88,6 +92,9 @@ export default function CustomizedTables() {
   const [
     businessListings
   ] = useStickyState( [] , "businesslisting");
+
+  
+
 
   return (
       
@@ -152,6 +159,24 @@ export default function CustomizedTables() {
               </Link>
             </Grid>
           </Grid>
+    </Container>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <Container component="main" maxWidth="lg">
+        &nbsp;
+       <p>&nbsp;</p>  
+    </Container>
+    
+        <Jokes />
+
+    <Container component="main" maxWidth="lg">
+        &nbsp;
+       <p>&nbsp;</p>  
     </Container>
     </React.Fragment>
     

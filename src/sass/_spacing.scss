@@ -1,0 +1,5 @@
+$spacing-base: 12px;
+
+@function getSpacing($multiplier: 1) {
+    @return $spacing-base * $multiplier;
+}

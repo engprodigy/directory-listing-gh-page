@@ -15,19 +15,8 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { useAuth } from './../App.js';
+import Copyright from './Copyright';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -46,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+  },
+  lowergrid: {
+    fontSize: 10,
   },
 }));
 
@@ -140,11 +132,22 @@ export default function SignUp() {
           <Grid container justify="flex-end">
             <Grid item>
               <Link href="/" variant="body2">
-                Not able to Sign in?  Go to home page
+                Not able to Sign in?  Go to home page  
               </Link>
+            </Grid>
+            <Grid item>
+               
             </Grid>
           </Grid>
         </form>
+        <Box mt={5}>
+       
+         </Box>
+        <Typography className={classes.lowergrid}>
+               <p>Admin login details:</p>
+               <p>Email Address: admin@email.com</p>
+               <p>Password: @Password123</p>
+        </Typography>
       </div>
       <Box mt={5}>
         <Copyright />

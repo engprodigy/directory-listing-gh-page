@@ -1,0 +1,57 @@
+// Color implementations.
+$color-primary: #ffffff;
+$color-brand: #19b9be;
+
+// Typography
+$color-text: #2d3746;
+$color-text-subtle: #6c798a;
+$color-text-inverted: #fff;
+$color-link: #4484f0;
+$color-stream-link-icon: #6532cd;
+
+// Emphasis
+$color-error: #ff5959;
+$color-warning: #ff7600;
+$color-success: #0ad962;
+
+
+$color-accent-primary: #4484f0;
+$color-subtle: #8293ab;
+
+// Borders
+$color-border: #c4cbd4;
+$color-border-seperator: #DFE4EB;
+$color-border-subtle: #c4cbd4;
+$color-border-stream-card-top: #6532cd;
+$color-border-hover: #9ca9ba;
+$color-tenant-logo-border: #142949;
+$color-border-button-checked: #3347e1;
+
+// Backgrounds
+$color-background-dark: #343f50;
+$color-background-primary: #ffffff;
+$color-background-secondary: #f3f4f7;
+$color-background-tertiary: #f0f2f8;
+$color-background-subtle: #f5f7fa;
+$color-background-header: #e1e5eb;
+$color-background-admin-bar: #3d4b5e;
+$color-background-admin-tab: #c4cbd4;
+$color-background-tennant-bar: #ffffff;
+$color-background-navigation-active: #0AB9AF;
+$color-background-application: #0ad962;
+$color-background-application-hover: #04c454;
+$color-background-property-card-header: #6c798a;
+$color-background-stream-card: #f0f2f7;
+$color-background-page-section-subnav: #e1e9f6;
+$color-background-application-request: #f0f2f7;
+$color-background-table-hover: #f0f2f7;
+$color-background-zooming: #334257;
+$color-background-login-top-bar: #d5eced;
+$color-background-grant-denied-reason: #dfe4eb;
+$color-background-disabled: #f7f8fb;
+$color-background-modal-background: rgba(65, 82, 105, 0.76);
+
+// Link coloring
+$link-color: $color-text-subtle;
+$link-color-hover: $color-text-inverted;
+$background-color: $color-background-dark;
